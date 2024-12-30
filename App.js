@@ -58,9 +58,13 @@ const start = async () => {
   try {
     const result = await dbConnecttion.execute("select 'test'");
     console.log(result);
-    app.listen(port);
+    const port = process.env.PORT || 3000; // Ensure app listens on correct port (either from Render or fallback to 3000)
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`); // Log the port the app is using
+    });
+
     console.log("databse connected");
-    console.log("server is running");
+
   } catch (error) {
     console.log(error.message);
   }
