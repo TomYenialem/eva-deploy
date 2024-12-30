@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const port = 3000;
+const port = process.env.PORT || 3000; 
 app.get("/user", (req, res) => {
   const createUserTable = `CREATE TABLE  IF NOT EXISTS USER(
   user_id INT AUTO_INCREMENT PRIMARY KEY,
