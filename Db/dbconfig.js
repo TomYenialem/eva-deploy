@@ -17,6 +17,7 @@ const dbConnection = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0,
   connectTimeout: 10000,
+  port: 3306,
 });
 
 // Use promises to handle queries
