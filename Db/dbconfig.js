@@ -9,16 +9,15 @@ const dbConnection = mysql.createPool({
   // database: process.env.DATABASE, // Database name
   // connectTimeout: 10000, // Timeout for connection (in ms)
 
- 
-  user: "rebiyaqa_Tom",
-  database: "rebiyaqa_Evangadiqa",
-  host: "91.204.209.15",
-  password: "C~HYfFA;s2qB",
+  user: "freedb_temesgen",
+  database: "freedb_evangadi",
+  host: "sql.freedb.tech",
+  password: "Z??dskcGu4fCwe2",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
   connectTimeout: 10000,
-}); 
+});
 
 // Use promises to handle queries
 module.exports = dbConnection.promise();
